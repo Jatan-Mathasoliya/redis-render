@@ -1,6 +1,9 @@
 services:
   - type: web
-    name: redis-render
+    name: my-docker-app
     plan: free
     docker:
       image: redis:alpine
+    env:
+      - key: PORT
+        value: "6379"  
